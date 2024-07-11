@@ -6,28 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container bg-light mt-5">
         <h3>Cadastro de carros:</h3>
         <form #formCar="ngForm">
-            <div class="row">
-                <label for="title" class="form-label">Nome:</label>
-                <div>
-                    <input type="text" class="form-control" [(ngModel)]="car.name" name="title" id="title" required>
+            <div class="row mb-3 mt-3">
+                <label for="title" class="col-sm-2 form-label">Nome:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="col-sm-2  form-control" [(ngModel)]="car.name" name="title" id="name" required>
                 </div>
             </div>
-            <div class="row">
-                <label for="author" class="form-label">Montadora:</label>
-                <div>
-                    <input type="text" class="form-control" [(ngModel)]="car.automaker" name="author" id="author" required>
+            <div class="row mb-3">
+                <label for="author" class=" col-sm-2 form-label">Montadora:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" [(ngModel)]="car.automaker" name="author" id="automaker" required>
                 </div>
             </div>
+           
             <div class="row">
-                <label for="price" class="form-label">Preço:</label>
-                <div>
+                <label for="price" class="col-sm-2  form-label">Preço:</label>
+                <div class="col-sm-4">
                     <input type="text" class="form-control" [(ngModel)]="car.price" name="price" id="price" required>
                 </div>
+                <label for="price" class="col-sm-2 form-label">Ano:</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" [(ngModel)]="car.year" name="price" id="year" required>
+                </div>
             </div>
-            <div class="row mt-3">
+            
+            <div class="row mt-3 mb-5">
                 <div>
                     <!-- Componente filho envia o evento ao clicar este botão -->
                     <button type="submit" class="btn btn-primary" (click)="salvar()  "[disabled]="formCar.invalid"> Salvar </button>

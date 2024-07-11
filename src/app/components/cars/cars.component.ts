@@ -63,6 +63,9 @@ export class CarsComponent {
       
     }
 
+    this.car = {} as Car;
+    this.isUpdate = false;
+
 
   }
   updateCar(car: Car){
