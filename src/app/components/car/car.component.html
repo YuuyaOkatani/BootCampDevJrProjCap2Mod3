@@ -1,1 +1,41 @@
-<p>car works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h3>Cadastro de carros:</h3>
+        <form #formCar="ngForm">
+            <div class="row">
+                <label for="title" class="form-label">Titulo:</label>
+                <div>
+                    <input type="text" class="form-control" [(ngModel)]="car.name" name="title" id="title" required>
+                </div>
+            </div>
+            <div class="row">
+                <label for="author" class="form-label">Autor:</label>
+                <div>
+                    <input type="text" class="form-control" [(ngModel)]="car.automaker" name="author" id="author" required>
+                </div>
+            </div>
+            <div class="row">
+                <label for="price" class="form-label">Preço:</label>
+                <div>
+                    <input type="text" class="form-control" [(ngModel)]="car.price" name="price" id="price" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div>
+                    <!-- Componente filho envia o evento ao clicar este botão -->
+                    <button type="submit" class="btn btn-primary" (click)="salvar()  "[disabled]="formCar.invalid"> Salvar </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    
+</body>
+</html>

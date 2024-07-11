@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Car } from '../../car';
 
 @Component({
   selector: 'app-car',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrl: './car.component.css'
 })
 export class CarComponent {
+
+  @Input()
+  car: Car = {} as Car
+
+  @Output()
+  readyEmitter = new EventEmitter();
+
+  salvar(){
+    this.readyEmitter.emit();
+  }
+
 
 }
