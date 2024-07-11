@@ -1,5 +1,5 @@
 
-<app-car></app-car>
+<app-car [car]="car" (readyEmitter)="salvarCar()"></app-car>
 
 <div class="container bg-light">
     <h3>Carros cadastrados:</h3>
@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let car of cars">
+            <tr *ngFor="let car of cars" >
                 <td>{{car.id}}</td>
                 <td>{{car.name}}</td>
                 <td>{{car.automaker}}</td>

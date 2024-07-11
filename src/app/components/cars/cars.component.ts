@@ -9,7 +9,7 @@ import { Car } from '../../car';
 export class CarsComponent {
 
   car: Car = {} as Car; 
-  idCount: number = 0; 
+  idCount: number = 1; 
   isUpdate: Boolean = false; 
 
 
@@ -53,8 +53,8 @@ export class CarsComponent {
 
   salvarCar(){
     if(!this.isUpdate){
-      this.car.id = this.idCount; 
-      this.idCount++;
+       
+      this.car.id = this.idCount * this.cars.length * this.cars.length - 1
       this.cars.push(this.car);
 
     }
