@@ -18,5 +18,7 @@ export class CarComponent {
     this.readyEmitter.emit();
   }
 
+  
+
 
 }

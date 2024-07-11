@@ -51,10 +51,6 @@ export class CarsComponent {
     }
   ];
 
-
-
-
-
   salvarCar(){
     if(!this.isUpdate){
       this.car.id = this.idCount; 
@@ -81,5 +77,11 @@ export class CarsComponent {
 
 
   }
+
+
+
+
+
+  
 
 }
