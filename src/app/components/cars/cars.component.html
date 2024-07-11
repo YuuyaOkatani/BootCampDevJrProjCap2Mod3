@@ -1,2 +1,32 @@
 
-<app-car [car]="" (readyEmitter)="" ></app-car>
+<app-car></app-car>
+
+<div class="container mt-5">
+    <h3>Carros cadastrados</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Montadora</th>
+                <th>Preço</th>
+                <th>Ano</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let car of cars">
+                <td>{{car.id}}</td>
+                <td>{{car.name}}</td>
+                <td>{{car.automaker}}</td>
+                <td>{{car.price}}</td>
+                <td>{{car.year}}</td>
+                <td>
+                    
+                </td>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+</div>

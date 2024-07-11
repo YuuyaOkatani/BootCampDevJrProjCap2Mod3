@@ -10,13 +10,13 @@
         <h3>Cadastro de carros:</h3>
         <form #formCar="ngForm">
             <div class="row">
-                <label for="title" class="form-label">Titulo:</label>
+                <label for="title" class="form-label">Nome:</label>
                 <div>
                     <input type="text" class="form-control" [(ngModel)]="car.name" name="title" id="title" required>
                 </div>
             </div>
             <div class="row">
-                <label for="author" class="form-label">Autor:</label>
+                <label for="author" class="form-label">Montadora:</label>
                 <div>
                     <input type="text" class="form-control" [(ngModel)]="car.automaker" name="author" id="author" required>
                 </div>
