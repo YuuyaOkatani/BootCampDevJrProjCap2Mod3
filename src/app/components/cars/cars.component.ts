@@ -8,6 +8,11 @@ import { Car } from '../../car';
 })
 export class CarsComponent {
 
+  car: Car = {} as Car; 
+  idCount: number = 0; 
+  isUpdate: Boolean = false; 
+
+
   cars: Car[] = [
     {
       id: 1,
@@ -45,5 +50,36 @@ export class CarsComponent {
       year: 2020
     }
   ];
+
+
+
+
+
+  salvarCar(){
+    if(!this.isUpdate){
+      this.car.id = this.idCount; 
+      this.idCount++;
+      this.cars.push(this.car);
+
+    }
+    else{
+      this.isUpdate? this.car = {} as Car:''; 
+      
+    }
+
+
+  }
+  updateCar(car: Car){
+    this.car = car;
+    this.isUpdate = true;
+
+  }
+
+  removeCar(car:Car){
+    this.car = car; 
+    this.cars = this.cars.filter(c => c.id!== this.car.id);
+
+
+  }
 
 }
